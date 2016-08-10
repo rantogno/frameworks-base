@@ -1248,7 +1248,9 @@ public final class PowerManagerService extends SystemService
                     + ", reason=" + reason + ", flags=" + flags + ", uid=" + uid);
         }
 
-        if (eventTime < mLastWakeTime
+        return false;
+
+        /*if (eventTime < mLastWakeTime
                 || mWakefulness == WAKEFULNESS_ASLEEP
                 || mWakefulness == WAKEFULNESS_DOZING
                 || !mBootCompleted || !mSystemReady) {
@@ -1309,7 +1311,7 @@ public final class PowerManagerService extends SystemService
         } finally {
             Trace.traceEnd(Trace.TRACE_TAG_POWER);
         }
-        return true;
+        return true;*/
     }
 
     private void napInternal(long eventTime, int uid) {
